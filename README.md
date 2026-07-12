@@ -60,7 +60,8 @@ Pi installs the package under `~/.pi/agent/npm/` and auto-loads the extension fr
 ### Option B — git clone
 
 ```bash
-git clone https://github.com/ZachDreamZ/pi-loop ~/.pi/agent/extensions/pi-loop
+git clone https://github.com/ZachDreamZ/pi-loop /tmp/pi-loop
+cp /tmp/pi-loop/extensions/index.ts ~/.pi/agent/extensions/pi-loop/index.ts
 ```
 
 Then run `/reload` (or restart Pi). No build step — Pi loads `index.ts` directly from the extensions directory.
@@ -227,7 +228,7 @@ npm install        # pulls typescript + @types/node for type-checking
 npm run typecheck  # tsc --noEmit (validates the extension in isolation via a type shim)
 ```
 
-`index.ts` is the entire extension. Pi loads it directly (no build step). The type shim in
+`extensions/index.ts` is the entire extension. Pi loads it directly (no build step). The type shim in
 `shims/pi-coding-agent.d.ts` lets `tsc` type-check the file without the Pi binary. CI runs
 `npm run typecheck` on every push/PR.
 

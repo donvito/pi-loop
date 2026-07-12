@@ -1,6 +1,6 @@
 {
   "name": "@realvendex/pi-loop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pi coding-agent extension that adds a /loop command — run a prompt repeatedly with convergence detection, rich stop conditions, lifecycle hooks, a live TUI panel, and desktop notifications.",
   "keywords": [
     "pi",
@@ -16,16 +16,16 @@
   "license": "MIT",
   "author": "ZachDreamZ <xxtheshadowcarft@gmail.com>",
   "type": "module",
-  "main": "index.ts",
-  "types": "index.ts",
+  "main": "extensions/index.ts",
+  "types": "extensions/index.ts",
   "files": [
-    "index.ts",
+    "extensions",
     "README.md",
     "LICENSE",
     "CHANGELOG.md"
   ],
   "pi": {
-    "extensions": ["./index.ts"]
+    "extensions": ["./extensions"]
   },
   "scripts": {
     "typecheck": "tsc --noEmit",

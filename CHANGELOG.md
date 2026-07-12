@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Restructured to the proven Pi-package convention: the extension entry is now `extensions/index.ts` and the `pi` manifest points at the `./extensions` directory (instead of a bare `./index.ts` file path), matching `pi-ultra-compact`. Removes any ambiguity about manifest entry resolution.
+
 ## 1.0.1
 
 - Added a `pi` package manifest (`"pi": { "extensions": ["./index.ts"] }`) and the `pi-package` keyword so the extension installs and auto-loads via `pi install npm:@realvendex/pi-loop`.

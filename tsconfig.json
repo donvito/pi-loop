@@ -13,5 +13,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["index.ts", "shims/**/*.d.ts"]
+  "include": ["extensions/index.ts", "shims/**/*.d.ts"]
 }
