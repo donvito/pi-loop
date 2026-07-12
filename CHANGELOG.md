@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Added a `pi` package manifest (`"pi": { "extensions": ["./index.ts"] }`) and the `pi-package` keyword so the extension installs and auto-loads via `pi install npm:@realvendex/pi-loop`.
+- Documented `pi install` as the recommended install method in the README.
+
 ## 1.0.0
 
 - Initial public release of `@realvendex/pi-loop`.

@@ -46,17 +46,26 @@ TUI panel, and desktop notifications.
 
 ## Install
 
-Pi loads extensions from an auto-discovery directory as `index.ts`. Two install methods:
+`@realvendex/pi-loop` is a Pi package: it ships a `pi` manifest that tells Pi to load `index.ts` as an extension. Pick **one** method — do **not** combine them, or `/loop` gets registered twice and Pi warns about a duplicate command.
 
-### Option A — git clone (recommended)
+### Option A — `pi install` (recommended)
+
+```bash
+pi install npm:@realvendex/pi-loop          # latest
+pi install npm:@realvendex/pi-loop@1.0.1    # or pin a version
+```
+
+Pi installs the package under `~/.pi/agent/npm/` and auto-loads the extension from its `pi` manifest. Run `/reload` (or restart Pi) to activate it. Update later with `pi update npm:@realvendex/pi-loop`.
+
+### Option B — git clone
 
 ```bash
 git clone https://github.com/ZachDreamZ/pi-loop ~/.pi/agent/extensions/pi-loop
 ```
 
-Then run `/reload` (or restart Pi). No build step — Pi loads TypeScript directly.
+Then run `/reload` (or restart Pi). No build step — Pi loads `index.ts` directly from the extensions directory.
 
-### Option B — npm
+### Option C — npm + manual copy
 
 ```bash
 npm i -g @realvendex/pi-loop
