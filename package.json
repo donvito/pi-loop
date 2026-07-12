@@ -1,0 +1,46 @@
+{
+  "name": "@realvendex/pi-loop",
+  "version": "1.0.0",
+  "description": "Pi coding-agent extension that adds a /loop command — run a prompt repeatedly with convergence detection, rich stop conditions, lifecycle hooks, a live TUI panel, and desktop notifications.",
+  "keywords": [
+    "pi",
+    "pi-coding-agent",
+    "loop",
+    "agent",
+    "automation",
+    "claude-code",
+    "extension",
+    "self-improving"
+  ],
+  "license": "MIT",
+  "author": "ZachDreamZ <xxtheshadowcarft@gmail.com>",
+  "type": "module",
+  "main": "index.ts",
+  "types": "index.ts",
+  "files": [
+    "index.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZachDreamZ/pi-loop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZachDreamZ/pi-loop/issues"
+  },
+  "homepage": "https://github.com/ZachDreamZ/pi-loop#readme"
+}
