@@ -607,8 +607,10 @@ function messageToText(message: any): string {
 function getLastAssistantText(ctx: any): string {
 	const entries = ctx?.sessionManager?.getEntries?.() ?? [];
 	for (let index = entries.length - 1; index >= 0; index--) {
-		if (entries[index]?.role === "assistant") {
-			return messageToText(entries[index]);
+		// pi session entries wrap messages: { type: "message", message: { role, content } }
+		const message = entries[index]?.message ?? entries[index];
+		if (message?.role === "assistant") {
+			return messageToText(message);
 		}
 	}
 	return "";
